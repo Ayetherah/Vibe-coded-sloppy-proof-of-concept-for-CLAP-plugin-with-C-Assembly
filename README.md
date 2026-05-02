@@ -7,7 +7,17 @@ The author is NOT RESPONCIBLE for your pc BLOWING THE FUCK UP if the slop GPT di
 But for me it worked and I am still alive, soo... I guess the show will go on.
 
 # Compilation process
+1\. You'll likely need to
+```console
+sudo apt install nasm gcc git
+```
+
+2\. This is the compilation process
+```console
 nasm -f elf64 -o dsp.o dsp.s
+```
+```console
 gcc -shared -fPIC -o asm_plugin.clap main.c dsp.o -I.
+```
 
 Tested and compiled on Linux Mint, x64
